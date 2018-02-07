@@ -4,11 +4,13 @@ require 'selenium-webdriver'
 require 'site_prism'
 require_all 'lib'
 
-task default: %w[google_url]
+task default: %w[philharmoniker:ounce_price]
 
-desc 'Prints the Google URL'
-task :google_url do
-  page = GooglePage.new
-  page.load
-  puts GooglePage.new.current_url
+namespace :philharmoniker do
+  desc 'Prints the price for one ounce of Wiener Philharmoniker'
+  task :ounce_price do
+    goldvorsorge = Goldvorsorge.new
+    goldvorsorge.load
+    puts goldvorsorge.current_url
+  end
 end
