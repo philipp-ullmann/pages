@@ -2,3 +2,4 @@ vendor
 .bundle
 .idea
 *.swp
+.byebug_history

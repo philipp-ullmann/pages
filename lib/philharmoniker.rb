@@ -1,3 +1,5 @@
 class Philharmoniker < SitePrism::Section
-  elements :price, 'div:nth-of-type(2)'
+  def price
+    root_element.text.match('(€ \d*\.?\d*,\d{2})')[1]
+  end
 end
