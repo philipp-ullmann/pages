@@ -1,6 +1,6 @@
 require 'require_all'
 require 'capybara/dsl'
-require 'selenium-webdriver'
+require 'capybara/webkit'
 require 'site_prism'
 require_all 'lib'
 
